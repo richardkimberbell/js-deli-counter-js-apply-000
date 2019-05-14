@@ -2,6 +2,18 @@ function takeANumber(line,name) {
   line.push(name)
   return `Welcome, ${name}. You are number ${line.length} in line.`
 }
+var lastnum=1
+function takeANumberTwo(line) {
+  line.push(lastnum)
+  lastnum++
+  return `Your number is ${lastnum-1}`
+}
+
+function newDay() {
+  lastnum=1
+}
+
+
 function nowServing(line) {
   if(line.length>0) {
     return `Currently serving ${line.shift()}.`
